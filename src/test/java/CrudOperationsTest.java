@@ -5,6 +5,7 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 import static org.hamcrest.Matchers.equalTo;
 
 public class CrudOperationsTest extends BaseTest {
+
   private TasksService tasksService = new TasksService();
   String taskPayLoad = "{\"title\": \"Read a book\"}";
 
