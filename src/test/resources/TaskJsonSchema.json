@@ -1,0 +1,68 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "tasks"
+  ],
+  "properties": {
+    "tasks": {
+      "$id": "#/properties/tasks",
+      "type": "array",
+      "title": "The Tasks Schema",
+      "items": {
+        "$id": "#/properties/tasks/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "description",
+          "done",
+          "id",
+          "title"
+        ],
+        "properties": {
+          "description": {
+            "$id": "#/properties/tasks/items/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "default": "",
+            "examples": [
+              "Milk, Cheese, Pizza, Fruit, Tylenol"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "done": {
+            "$id": "#/properties/tasks/items/properties/done",
+            "type": "boolean",
+            "title": "The Done Schema",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "id": {
+            "$id": "#/properties/tasks/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "title": {
+            "$id": "#/properties/tasks/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "default": "",
+            "examples": [
+              "Buy groceries"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}
